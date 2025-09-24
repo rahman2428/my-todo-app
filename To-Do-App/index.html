@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple To-Do App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app" role="application" aria-label="Simple todo app">
+    <header class="header">
+      <h1>To-Do List</h1>
+      <p class="subtitle">Add tasks, mark done, edit, delete — saved in your browser</p>
+    </header>
+
+    <form id="todo-form" class="todo-form" aria-label="Add new todo">
+      <input id="new-todo" type="text" placeholder="What do you need to do?" aria-label="New todo" />
+      <button id="add-btn" type="submit">Add</button>
+    </form>
+
+    <div class="controls">
+      <div class="filters" role="tablist" aria-label="Filter todos">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="active">Active</button>
+        <button class="filter" data-filter="completed">Completed</button>
+      </div>
+      <button id="clear-completed" class="clear">Clear completed</button>
+    </div>
+
+    <p id="count" class="count">0 items left</p>
+
+    <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+
+    <footer class="footer">
+      <small>Saved locally (localStorage)</small>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
